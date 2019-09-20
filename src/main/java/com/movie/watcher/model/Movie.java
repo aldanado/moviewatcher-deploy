@@ -26,6 +26,15 @@ public class Movie {
     private String Actors;
     private String Plot;
     private String Awards;
+    private String imdbRating;
+
+    public String getImdbRating() {
+        return imdbRating;
+    }
+
+    public void setImdbRating(String imdbRating) {
+        this.imdbRating = imdbRating;
+    }
 
     public String getRated() {
         return Rated;
@@ -94,7 +103,9 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(Long id, @NotBlank String imdbID, @NotBlank String title, String year, @NotBlank String type, String poster, boolean favorite, String rated, String released, String runtime, String genre, String director, String actors, String plot, String awards) {
+    public Movie(Long id, @NotBlank String imdbID, @NotBlank String title, String year, @NotBlank String type,
+                 String poster, boolean favorite, String rated, String released, String runtime, String genre,
+                 String director, String actors, String plot, String awards, String imdbRating) {
         this.imdbID = imdbID;
         this.id = id;
         this.Title = title;
@@ -110,6 +121,7 @@ public class Movie {
         this.Actors = actors;
         this.Plot = plot;
         this.Awards = awards;
+        this.imdbRating = imdbRating;
     }
 
     public Movie(Long id, String imdbID, String Title, String Year, String type, String posterLink, Boolean favorite) {
